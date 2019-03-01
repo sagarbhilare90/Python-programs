@@ -1,0 +1,39 @@
+#check armstrong number
+#get a input no
+num = int(input("Enter a number: "))
+
+#find the power 
+def power(x,n):
+    if n==0:
+        return 1
+    else:
+        return x**n
+        
+# get order or no of digits
+def order(r):
+    n=0
+    while(r!=0):
+        r=r/10
+        n=n+1
+    return n
+    
+#check armstrong no    
+def CheckArmstrong(no):
+    s= order(no)
+    new= no
+    res=0
+    while new!=0:
+        rem= new%10
+        res+= power(rem,s)
+        new=new/10
+    if(res==no):
+        print("True")
+    else:
+        print("False")
+print(CheckArmstrong(num))
+print(order(num))
+print(power(num,3))
+
+    
+        
+        
