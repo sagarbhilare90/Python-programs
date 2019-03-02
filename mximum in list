@@ -1,0 +1,10 @@
+#maximum value in a list
+val=[12,13,14,19]
+n=len(val)
+maxm=val[0]
+for i in range(1,n):
+    if val[i]>maxm:
+        maxm=val[i]
+print(maxm)
+    
+    
