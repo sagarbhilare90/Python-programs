@@ -1,0 +1,2 @@
+getchar= input("enter a character: ")
+print(ord(getchar))
