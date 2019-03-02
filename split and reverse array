@@ -1,0 +1,9 @@
+#splitarray and add it at last
+lis= [9,8,7,6,8]
+n=len(lis)
+def part(arr,no):
+    val1=lis[0:no]
+    val2=lis[no:n]
+    return val2+val1
+print(part(lis, 2))
+    
