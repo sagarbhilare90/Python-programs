@@ -1,0 +1,40 @@
+# importing struct module
+import struct
+import math
+# program to check a geometric figure
+#taking 4 points for analysis
+pts1= struct.pack('ii', 0,0)
+point1= struct.unpack('ii', pts1)
+pts2= struct.pack('ii',0,4)
+point2= struct.unpack('ii',pts2)
+pts3= struct.pack('ii',6,4)
+point3= struct.unpack('ii',pts3)
+pts4= struct.pack('ii',6,0)
+point4= struct.unpack('ii',pts4)
+
+#function to calculate Distance
+def CalculateDistance(pt1,pt2):
+    valx= (pt1[0]-pt2[0])**2
+    valy= (pt1[1]-pt2[1])**2
+    add = (math.sqrt(valx+valy))
+    return print(add)
+
+#Calculate distance between two points
+dist12= CalculateDistance(point1,point2)
+dist23= CalculateDistance(point2,point3)
+dist34= CalculateDistance(point3,point4)
+dist41= CalculateDistance(point4,point1)
+dist13= CalculateDistance(point1,point3)
+dist24= CalculateDistance(point2,point4)
+diagnol1= math.sqrt(dist12*dist12 + dist23*dist23)
+diagnol2= math.sqrt(dist34*dist34 + dist41*dist41)
+if dist12==dist34 and diagnol1==diagnol2:
+    print("it is a rectangle")
+else:
+    print("not a rectangle")
+
+
+
+
+    
+
