@@ -1,0 +1,12 @@
+arr=[1,2,3,4,5]
+#rotate array 
+def rotate(ar, d,n):
+    for i in range(d):
+        rotateone(ar,n)
+    return ar
+def rotateone(a, n):
+    temp=a[0]
+    for i in range(n-1):
+        a[i]=a[i+1]
+    a[n-1]= temp
+print(" reverse array is: ",rotate(arr,2,5))
