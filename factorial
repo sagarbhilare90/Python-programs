@@ -1,0 +1,6 @@
+num= int(input("Enter a number: "))
+def fact(num1):
+    return 1 if num1==1 or num1==0 else num1*fact(num1-1)
+print("factorial is ",fact(num))
+          
+          
