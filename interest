@@ -1,0 +1,8 @@
+#simple interest
+p= float(input("Enter the principal: "))
+n= float(input("Enter the period : "))
+r= float(input("Enter the rate of interest: "))
+si = p*n*r/100
+print( "the simple interest is : ", si)
+ci = ((p*(1+(r/100))**n) - p)
+print("the compound interest is: ", ci)
