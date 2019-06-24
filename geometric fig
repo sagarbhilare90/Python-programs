@@ -1,23 +1,22 @@
-# importing struct module
 import struct
 import math
 # program to check a geometric figure
-#taking 4 points for analysis
-pts1= struct.pack('ii', 0,0)
-point1= struct.unpack('ii', pts1)
-pts2= struct.pack('ii',0,4)
-point2= struct.unpack('ii',pts2)
-pts3= struct.pack('ii',6,4)
-point3= struct.unpack('ii',pts3)
-pts4= struct.pack('ii',6,0)
-point4= struct.unpack('ii',pts4)
+#taking 4 points as 4 vertex
+pts1= struct.pack('ll', 0,0)
+point1= struct.unpack('ll', pts1)
+pts2= struct.pack('ll',0,4)
+point2= struct.unpack('ll',pts2)
+pts3= struct.pack('ll',6,4)
+point3= struct.unpack('ll',pts3)
+pts4= struct.pack('ll',6,0)
+point4= struct.unpack('ll',pts4)
 
 #function to calculate Distance
 def CalculateDistance(pt1,pt2):
     valx= (pt1[0]-pt2[0])**2
     valy= (pt1[1]-pt2[1])**2
     add = (math.sqrt(valx+valy))
-    return print(add)
+    return add
 
 #Calculate distance between two points
 dist12= CalculateDistance(point1,point2)
@@ -32,9 +31,3 @@ if dist12==dist34 and diagnol1==diagnol2:
     print("it is a rectangle")
 else:
     print("not a rectangle")
-
-
-
-
-    
-
